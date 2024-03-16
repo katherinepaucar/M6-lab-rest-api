@@ -3,21 +3,18 @@ import React from 'react';
 import { Character } from './character.vm';
 import * as classes from './character.styles';
 import { Formik, Form } from 'formik';
-import { SelectComponent, TextFieldComponent } from 'common/components';
-import { Lookup } from 'common/models';
+import { TextFieldComponent } from 'common/components';
 import { formValidation } from 'pods/character-collection/character.validations';
 interface Props {
   character: Character;
-  status: Lookup[];
-  gender: Lookup[];
-  onSave: (character: Character) => void;
+  close: () => void;
 }
 export const CharacterComponent: React.FC<Props> = (props) => {
-  const { character, onSave, status, gender } = props;
+  const { character, close } = props;
   const showFieldImage = false;
   return (
     <Formik
-      onSubmit={onSave}
+      onSubmit={close}
       initialValues={character}
       enableReinitialize={true}
       validate={formValidation.validateForm}
