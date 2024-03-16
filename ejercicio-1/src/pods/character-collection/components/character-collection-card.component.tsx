@@ -7,18 +7,17 @@ import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar/Avatar';
 import IconButton from '@mui/material/IconButton/IconButton';
-import EditIcon from '@mui/icons-material/Edit';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import * as classes from './character-card.styles';
 import { CharacterVM } from '../character-collection.vm';
 
 interface Props {
   character: CharacterVM;
-   onEdit: (id: string) => void;
-
+  onShow: (id: string) => void;
 }
 
 export const CharacterCard: React.FunctionComponent<Props> = (props) => {
-  const { character, onEdit } = props;
+  const { character, onShow } = props;
 
   return (
     <Card>
@@ -40,8 +39,8 @@ export const CharacterCard: React.FunctionComponent<Props> = (props) => {
         </div>
       </CardContent>
       <CardActions>
-        <IconButton onClick={() => onEdit(character.id)}>
-          <EditIcon />
+        <IconButton onClick={() => onShow(character.id)}>
+          <VisibilityOutlinedIcon />
         </IconButton>
       </CardActions>
     </Card>

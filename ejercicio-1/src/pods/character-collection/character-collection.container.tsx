@@ -14,14 +14,13 @@ export const CharacterColletionContainer: React.FunctionComponent = () => {
   const handleCreateCharacter = () => {
     navigate(linkRoutes.createCharacter);
   };
-  const handleEdit = (id: string) => {
+  const handleshow = (id: string) => {
     navigate(linkRoutes.editCharacter(id));
   };
   return (
     <CharacterCollectionComponent
       characters={characterCollection}
-      onEdit={handleEdit}
-      onCreateCharacter={handleCreateCharacter}
+      onShow={handleshow}
     />
   );
 };
