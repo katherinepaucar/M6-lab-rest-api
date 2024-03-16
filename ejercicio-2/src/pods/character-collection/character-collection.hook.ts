@@ -8,7 +8,6 @@ export const useCharacterCollection = () => {
     React.useState<CharacterVM[]>(null);
   const loadCharacterCollection = () => {
     getCharacterCollection().then((result) => {
-      // const response = ResponseFromApiToVm(result);
       const response = mapCharacterCollectionFromApiToVm(result)
       setCharacterCollection(response);
     });
