@@ -1,9 +1,5 @@
 import { Lookup } from 'common/models/lookup';
 import { CharacterDetail } from './character-api-model';
-import {
-  mockGender,
-  mockSatus,
-} from './character-collection.mock.data';
 import axios from 'axios';
 
 const url = 'https://rickandmortyapi.com/api/character/';
@@ -15,11 +11,12 @@ export const getCharacterDetail = async (
   return response.data
 };
 export const getStatus = async (): Promise<Lookup[]> => {
-  return mockSatus;
+  const response = await  axios.get('api/status')
+  return response.data;
 };
 export const getGender = async (): Promise<Lookup[]> => {
-  return mockGender;
-};
+  const response = await  axios.get('api/gender')
+  return response.data;};
 
 export const saveCharacter = async (
   character: CharacterDetail
