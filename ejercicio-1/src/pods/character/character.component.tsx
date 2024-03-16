@@ -24,12 +24,30 @@ export const CharacterComponent: React.FC<Props> = (props) => {
     >
       {() => (
         <Form className={classes.root}>
-          <TextFieldComponent name="name" label="Name" />
-         { showFieldImage && <TextFieldComponent name="image" label="Imagen"/>}
-          { status && <SelectComponent name="status" label="Status" items={status} />}
-          { gender && <SelectComponent name="gender" label="Gender" items={gender} />}
+          <TextFieldComponent
+            name="name"
+            label="Name"
+            InputProps={{
+              readOnly: true,
+            }}
+          />
+          {showFieldImage && <TextFieldComponent name="image" label="Imagen" />}
+          <TextFieldComponent
+            name="status"
+            label="Status"
+            InputProps={{
+              readOnly: true,
+            }}
+          />
+          <TextFieldComponent
+            name="gender"
+            label="Gender"
+            InputProps={{
+              readOnly: true,
+            }}
+          />
           <Button type="submit" variant="contained" color="primary">
-            Save
+            Cerrar
           </Button>
         </Form>
       )}
