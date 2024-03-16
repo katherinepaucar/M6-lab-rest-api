@@ -3,11 +3,10 @@ import { CharacterDetail } from './character-api-model';
 import axios from 'axios';
 
 const url = 'https://rickandmortyapi.com/api/character/';
-const characterListUrl = '/api/charactersCollection';
 export const getCharacterDetail = async (
   id: string
 ): Promise<CharacterDetail> => {
-  const response = await axios.get(`${characterListUrl}/${id}`)
+  const response = await axios.get(`${url}/${id}`)
   return response.data
 };
 export const getStatus = async (): Promise<Lookup[]> => {
@@ -21,13 +20,5 @@ export const getGender = async (): Promise<Lookup[]> => {
 export const saveCharacter = async (
   character: CharacterDetail
 ): Promise<boolean> => {
-  if (character.id) {
-    await axios.put<CharacterDetail>(
-      `${characterListUrl}/${character.id}`,
-      character
-    );
-  } else {
-    await axios.post<CharacterDetail>(characterListUrl, character);
-  }
   return true;
 };

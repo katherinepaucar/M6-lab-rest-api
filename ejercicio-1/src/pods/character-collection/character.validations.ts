@@ -5,7 +5,6 @@ const validationSchema: ValidationSchema = {
     name: [Validators.required],
     status: [Validators.required],
     gender: [Validators.required],
-    sentences: [Validators.required],
   },
 };
 

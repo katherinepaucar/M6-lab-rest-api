@@ -28,7 +28,6 @@ export const CharacterComponent: React.FC<Props> = (props) => {
          { showFieldImage && <TextFieldComponent name="image" label="Imagen"/>}
           { status && <SelectComponent name="status" label="Status" items={status} />}
           { gender && <SelectComponent name="gender" label="Gender" items={gender} />}
-          <TextFieldComponent name="sentences" label="sentence" />
           <Button type="submit" variant="contained" color="primary">
             Save
           </Button>
