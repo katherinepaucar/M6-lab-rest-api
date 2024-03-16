@@ -8,15 +8,14 @@ export const mapCharacterFromApiToVm = (
   image: character.image,
   status: character.status,
   name: character.name,
-  sentences: character.bestSentences,
 });
 export const mapInfoPaginationFromApiToVm = (
   info: api.InfoPagination
 ): vm.paginationData => ({
-  next: info.next,
   totalElements: info.count,
+  next: info.next,
   pages: info.pages,
-  prev: info.prev,
+  prev: info.prev
 });
 
 export const mapCharacterCollectionFromApiToVm = (

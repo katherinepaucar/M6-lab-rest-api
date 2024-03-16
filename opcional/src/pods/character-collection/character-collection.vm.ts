@@ -3,13 +3,12 @@ export interface CharacterVM {
   name: string;
   status: string;
   image: string;
-  sentences: string;
 }
 export interface paginationData {
   totalElements: number;
-  next: string;
-  pages: number;
-  prev: string;
+  next?: string;
+  pages?: number;
+  prev?: string;
 }
 
 export interface CharacterCollectionVM {
