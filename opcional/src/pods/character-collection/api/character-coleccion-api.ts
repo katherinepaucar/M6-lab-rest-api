@@ -1,7 +1,7 @@
-import { GraphQLClient, gql } from 'graphql-request';
+import { gql } from 'graphql-request';
 import { CharacterResponse } from './character-collection-api-model';
-const url = 'https://rickandmortyapi.com/graphql';
-export const graphQLClient = new GraphQLClient(url);
+import { graphQLClient } from 'core/api';
+
 interface getCharacterColletionResponse {
   characters: CharacterResponse;
 }
