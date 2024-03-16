@@ -10,7 +10,7 @@ export const mapCharacterFromApiToVm = (
   name: character.name,
   sentences: character.bestSentences,
 });
-/*export const mapInfoPaginationFromApiToVm = (
+export const mapInfoPaginationFromApiToVm = (
   info: api.InfoPagination
 ): vm.paginationData => ({
   next: info.next,
@@ -18,15 +18,15 @@ export const mapCharacterFromApiToVm = (
   pages: info.pages,
   prev: info.prev,
 });
-*/
+
 export const mapCharacterCollectionFromApiToVm = (
   characterCollection: api.Character[]
 ): vm.CharacterVM[] =>
   characterCollection.map((character) => mapCharacterFromApiToVm(character));
 
-/*export const ResponseFromApiToVm = (
+export const ResponseFromApiToVm = (
   characterCollection: api.CharacterResponse
 ): vm.CharacterCollectionVM => ({
   info: mapInfoPaginationFromApiToVm(characterCollection.info),
   results: mapCharacterCollectionFromApiToVm(characterCollection.results),
-});*/
+});

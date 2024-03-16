@@ -1,8 +1,7 @@
 import axios from 'axios';
-import { Character } from './character-collection-api-model';
-// const url = 'https://rickandmortyapi.com/api/character';
-const characterUrl = '/api/charactersCollection';
-export const getCharacterCollection = async (): Promise<Character[]> => {
-  const { data } = await axios.get(characterUrl);
+import { CharacterResponse } from './character-collection-api-model';
+const url = 'https://rickandmortyapi.com/api/character';
+export const getCharacterCollection = async (): Promise<CharacterResponse> => {
+  const { data } = await axios.get(url);
   return data;
 };
