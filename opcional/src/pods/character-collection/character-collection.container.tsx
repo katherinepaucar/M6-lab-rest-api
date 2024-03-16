@@ -11,9 +11,7 @@ export const CharacterColletionContainer: React.FunctionComponent = () => {
   useEffect(() => {
     loadCharacterCollection();
   }, []);
-  const handleCreateCharacter = () => {
-    navigate(linkRoutes.createCharacter);
-  };
+
   const handleshow = (id: string) => {
     navigate(linkRoutes.editCharacter(id));
   };
