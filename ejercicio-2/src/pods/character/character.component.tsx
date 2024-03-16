@@ -14,6 +14,7 @@ interface Props {
 }
 export const CharacterComponent: React.FC<Props> = (props) => {
   const { character, onSave, status, gender } = props;
+  const showFieldImage = false;
   return (
     <Formik
       onSubmit={onSave}
@@ -24,7 +25,7 @@ export const CharacterComponent: React.FC<Props> = (props) => {
       {() => (
         <Form className={classes.root}>
           <TextFieldComponent name="name" label="Name" />
-          <TextFieldComponent name="image" label="Imagen" />
+         { showFieldImage && <TextFieldComponent name="image" label="Imagen"/>}
           { status && <SelectComponent name="status" label="Status" items={status} />}
           { gender && <SelectComponent name="gender" label="Gender" items={gender} />}
           <TextFieldComponent name="sentences" label="sentence" />
