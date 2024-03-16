@@ -23,15 +23,5 @@ export interface Character {
     name: string;
     url: string;
   }
-  
-  export interface InfoPagination {
-    count: number;
-    next: string;
-    pages: number;
-    prev: string;
-  }
-  export interface CharacterResponse {
-    info: InfoPagination;
-    results: Character[];
-  }
+
   
