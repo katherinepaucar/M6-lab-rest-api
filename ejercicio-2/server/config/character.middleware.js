@@ -2,7 +2,7 @@ const CharacterCollectionMiddleware = (req, res, next) =>{
     if(req.method === 'POST'){
         req.body = {
             ...req.body,
-            image: '/thumbnails/new-hotel.jpg',
+            image: '/thumbnails/poster.jpg',
         }
     }
     next();
