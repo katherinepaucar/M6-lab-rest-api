@@ -2,7 +2,6 @@ import { Lookup } from 'common/models/lookup';
 import { CharacterDetail } from './character-api-model';
 import axios from 'axios';
 
-const url = 'https://rickandmortyapi.com/api/character/';
 const characterListUrl = '/api/charactersCollection';
 export const getCharacterDetail = async (
   id: string
