@@ -3,7 +3,6 @@ import { generatePath } from 'react-router';
 interface SwitchRoutes {
   root: string;
   characterCollection: string;
-  character: string;
   createCharacter: string;
   editCharacter: string;
 }
@@ -11,7 +10,6 @@ interface SwitchRoutes {
 export const switchRoutes: SwitchRoutes = {
   root: '/',
   characterCollection: '/characters',
-  character: '/character-detail/:id',
   createCharacter: '/characters/create',
   editCharacter: '/characters/:id',
 };
