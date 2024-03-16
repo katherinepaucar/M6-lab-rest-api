@@ -3,7 +3,6 @@ export interface CharacterVM {
   name: string;
   status: string;
   image: string;
-  sentences: string;
 }
 export interface paginationData {
   totalElements: number;

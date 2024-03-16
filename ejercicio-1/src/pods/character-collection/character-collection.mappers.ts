@@ -7,8 +7,7 @@ export const mapCharacterFromApiToVm = (
   id: (character.id).toString(),
   image: character.image,
   status: character.status,
-  name: character.name,
-  sentences: character.bestSentences,
+  name: character.name
 });
 export const mapInfoPaginationFromApiToVm = (
   info: api.InfoPagination

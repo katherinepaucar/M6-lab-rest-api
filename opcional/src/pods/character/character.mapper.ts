@@ -8,8 +8,7 @@ export const mapCharacterFromApiToVm = (
   image: character.image,
   name: character.name,
   status: character.status,
-  id: character.id.toString(),
-  sentences: character.bestSentences,
+  id: character.id.toString()
 });
 
 export const mapCharacterFromVMtoApi = (
@@ -22,5 +21,4 @@ export const mapCharacterFromVMtoApi = (
     name: character.name,
     status: character.status,
     id: character.id,
-    bestSentences: character.sentences,
   } as unknown as api.CharacterDetail);
